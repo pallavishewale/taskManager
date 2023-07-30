@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task management system</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="display.js"></script>
+</head>
+<body>
+    <div class="task-container">
+         <div class="block1">
+        <label class="" >Task Name :</label>
+        <input type="text" class="task-name " id="main-task">
+        </div>
+        <div class="block2">
+        <button value="Add Task " class="form1-button" id="add-mainTask" onclick="addMainTask()">Add Task</button>
+        <button value="Add Task + Subtask" class="form1-button" id="add-mainAndSubtask" onclick="addTaskAndSubTask()">Add task + Sub task</button>
+        </div>
+    </div>
+
+    <div id="subtask-container">
+        <button class ="close" id="close" onclick="closeSubtask_form()">close</button>
+        <div class="grid-container">
+        
+            <label class=" grid-item " style="margin-top: 40px;">Subtask Name :</label>
+            <input type="text" id="Subtask-name" class="grid-item" required style="margin-top: 40px;">
+       
+
+       
+            <label class="grid-item">Start Date :</label>
+            <input type="date" id="startdatePicker" name="selectedDate" required class="grid-item">
+       
+
+       
+            <label class="grid-item">End Date  :</label>
+            <input type="date" class="grid-item" id="enddatePicker" name="selectedDate" required>
+       
+
+        
+            <label class="grid-item">Status :</label>
+            <select name="status"  id="status" class="grid-item" >
+                <option value="" style="display: none;"></option>
+               
+            </select>
+         
+        
+     </div>
+     <button class="add-btn" onclick="addSubTask()">Add</button>
+    </div>
+
+
+
+
+    <div class="table-container">
+        <table class="table " id="show">
+    
+            <tbody class="taskTable-tbody">
+    
+            </tbody>
+            
+        </table>
+       </div>
+    
+    
+</body>
+</html>

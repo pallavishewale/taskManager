@@ -1,0 +1,172 @@
+body{
+    background-color: rgb(228, 225, 226);
+}
+.task-container{
+   background-color: #051a44;
+    
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto ;
+    
+}
+.block1{
+    display: flex;
+    margin: 10px 150px;
+
+    width: 100%;
+}
+.block1 label{
+    font-size: 24px;
+    margin-left:50px;
+    margin-top:15px;
+    font-weight: 600;
+    color: white;
+    
+}
+.task-name{
+    padding: 12px 1px;
+   font-weight: 600;
+    width: 50%;
+    margin:15px 40px;
+}
+.block2{
+    display: flex;
+    margin-left: 35%;
+    width: 100%;
+}
+.form1-button{
+    padding: 10px 15px;
+    margin: 20px;
+    font-size:18px;
+    font-weight:600;
+    background-color:#87ca87
+}
+
+#subtask-container{
+    background-color: rgb(199, 199, 211);
+    height: auto;
+    width: 40%;
+    margin: 5% auto ;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 5px;
+    display: none;
+}
+.close{
+    float: right;
+    padding: 2px 15px;
+    background-color: #e03f0d;
+    border:none;
+    border-radius: 5px;
+    font-weight:600;}
+
+#subtask-container label{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 40% 60% ;
+    row-gap: 15px;
+    width: 70%;
+    column-gap: 10px;
+    margin: 60px 60px;
+    
+  }
+  .grid-item {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+
+  }
+  .add-btn{
+    padding: 10px 15px;
+    margin-left: 40%;
+    font-size:18px;
+    font-weight:600;
+    background-color:#87ca87;
+    margin-bottom: 40px;
+    
+  }
+
+  
+.table-container{
+    
+    background-color: whitesmoke;
+   margin: 80px auto ;
+   height: fit-content;
+   width: 90%;
+   overflow: auto;
+}
+table{
+    width: 100%;
+   
+}
+
+.table-container th {
+    padding: 5px;
+    text-align: center;
+    background-color:  #1e2a42;
+    font-size: 18px;
+    color: white;
+    
+}
+
+.table-container td {
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    color: #353536;
+    
+}
+tr:nth-child(even) {
+    background-color:  rgb(194, 189, 214);
+   
+ }
+ .parentTaskAction{
+    align-items: end;
+ }
+ .parentRow{
+    margin-top: 20px;
+ }
+ .parentRow td{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #1d3566;
+    color: white;
+  
+
+ }
+ .parentRowdata{
+    
+    
+    font-size: 24px;
+    padding: 55px;
+    font-weight: 700;
+
+ }
+  .edit-button{
+    background-color: #4670ec;
+    color:white;
+    font-weight: bold;
+  
+ }
+ .delete-button{
+    background-color: rgb(128, 17, 17);
+   color:white;
+    font-weight: bold;
+  
+ }
+ .addSubtask-button{
+    background-color: rgb(8, 94, 8);
+    color:white;
+    font-weight: bold;
+  
+ }
