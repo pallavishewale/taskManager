@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task management system</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="display.js"></script>
+    <script src="validations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+    <!----------------------main task container----------------->
+    <div class="task-container">
+         <div class="block1">
+        <label class="" >Task Name :</label>
+        <input type="text" class="task-name " id="main-task">
+        </div>
+        <div class="block2">
+        <button value="Add Task " class="form1-button" id="add-mainTask" onclick="addMainTask()">Add Task</button>
+        <button value="Add Task + Subtask" class="form1-button" id="add-mainAndSubtask" onclick="addTaskAndSubTask()">Add task + Sub task</button>
+        </div>
+    </div>
+<!-- -------------------container for subtask ------------>
+    <div id="subtask-container">
+        <button class ="close" id="close" onclick="closeSubtask_form()">close</button>
+        <div class="grid-container">
+        
+            <label class=" grid-item " style="margin-top: 40px;">Subtask Name :</label>
+            <input type="text" id="Subtask-name" class="grid-item"  style="margin-top: 40px;">
+       
+
+       
+            <label class="grid-item">Start Date :</label>
+            <input type="date" id="startdatePicker" onchange="updateEndDate()" name="selectedDate" required class="grid-item">
+       
+
+       
+            <label class="grid-item">End Date  :</label>
+            <input type="date" class="grid-item" id="enddatePicker" onchange="updateStartDate()" name="selectedDate" required>
+       
+
+        
+            <label class="grid-item">Status :</label>
+            <select name="status"  id="status" class="grid-item" >
+                <option value="" style="display: none;"></option>
+               
+            </select>
+         
+        
+     </div>
+     <button class="add-btn" onclick="addSubTask()">Add</button>
+     <label id ="">Total days :</label>
+     <label id="daycount" class="daycount">0</label>
+    </div>
+
+<!--     Search box template -->
+    <div class="search-box">
+        
+        <select name="search" id="search" class="search" >
+          <option value="Search By" style="display: none;">Search By</option>
+          <option value="main Task Name">main task Name</option>
+          <option value="Subtask Name">sub task Name</option>
+          <option value="start Date">Start Date</option>
+          <option value="End Date">End Date</option>
+          <option value="status">status</option>
+        </select>
+
+        <input type="text" calss="searchfield" style="padding: 9px; margin-right: 15px;" id="search-field" />
+        
+        <button id="search-btn" class="search-btn" onclick="search()">
+          Search
+        </button>
+        <button id="search-btn" class="search-btn" onclick="addMainTask()">
+          Show All
+        </button>
+      </div>
+
+
+      <!--     Table  template -->
+    <div class="table-container">
+        <table class="table " id="show">
+    
+            <tbody class="taskTable-tbody">
+    
+            </tbody>
+            
+        </table>
+       </div>
+    
+    
+</body>
+</html>
